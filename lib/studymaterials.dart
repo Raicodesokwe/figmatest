@@ -255,7 +255,7 @@ class _StudyMaterialState extends State<StudyMaterial> {
               ),
               Stack(clipBehavior: Clip.none, children: [
                 Container(
-                  height: 200,
+                  height:  size.height*0.25,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
