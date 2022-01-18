@@ -20,11 +20,7 @@ class LeadingArrow extends StatelessWidget {
 
             color: Colors.grey.withOpacity(0.3),
             borderRadius: BorderRadius.circular(10.0)),
-        child: const Icon(
-          FontAwesomeIcons.arrowLeft,
-          color: Colors.black,
-          // color: Theme.of(context).iconTheme,
-        ),
+        child:  Image.asset('assets/aro.png'),
       ),
     );
   }

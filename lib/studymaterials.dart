@@ -38,16 +38,12 @@ class _StudyMaterialState extends State<StudyMaterial> {
               child: DropdownButton2(
                 isExpanded: true,
                 hint: Row(
-                  children: const [
-                    Icon(
-                      Icons.book,
-                      size: 16,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
+                  children: [
+                    Image.asset('assets/bahasha.png'),
+                    const SizedBox(
                       width: 4,
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         'Syllabus',
                         style: TextStyle(
@@ -74,14 +70,16 @@ class _StudyMaterialState extends State<StudyMaterial> {
                             child: Row(
                               children: [
                                 item == 'Test'
-                                    ? const Icon(
-                                        FontAwesomeIcons.book,
-                                        size: 15,
+                                    ? const ImageIcon(
+                                        AssetImage(
+                                          'assets/tetest.png',
+                                        ),
                                         color: Colors.black,
                                       )
-                                    : const Icon(
-                                        Icons.text_snippet_outlined,
-                                        size: 15,
+                                    : const ImageIcon(
+                                        AssetImage(
+                                          'assets/study.png',
+                                        ),
                                         color: Colors.black,
                                       ),
                                 const Spacer(),
@@ -106,8 +104,10 @@ class _StudyMaterialState extends State<StudyMaterial> {
                     selectedValue = value as String;
                   });
                 },
-                icon: const Icon(
-                  Icons.arrow_drop_down,
+                icon: const ImageIcon(
+                  AssetImage(
+                    'assets/downarrow.png',
+                  ),
                 ),
                 iconSize: 14,
                 iconEnabledColor: Colors.white,
@@ -255,7 +255,7 @@ class _StudyMaterialState extends State<StudyMaterial> {
               ),
               Stack(clipBehavior: Clip.none, children: [
                 Container(
-                  height:  size.height*0.25,
+                  height: size.height * 0.25,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -318,37 +318,48 @@ class _StudyMaterialState extends State<StudyMaterial> {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
             elevation: 0,
             backgroundColor: Colors.transparent,
             items: [
               const BottomNavigationBarItem(
                   label: '',
-                  icon: Icon(
-                    Icons.home,
+                  icon: ImageIcon(
+                    AssetImage(
+                      'assets/mucii.png',
+                    ),
                     color: Colors.grey,
                   )),
               const BottomNavigationBarItem(
                   label: '',
-                  icon: Icon(
-                    Icons.text_snippet_outlined,
+                  icon: ImageIcon(
+                    AssetImage(
+                      'assets/meso.png',
+                    ),
                     color: Colors.grey,
                   )),
               const BottomNavigationBarItem(
                   label: '',
-                  icon: Icon(
-                    Icons.wallet_membership,
+                  icon: ImageIcon(
+                    AssetImage(
+                      'assets/wallet.png',
+                    ),
                     color: Colors.grey,
                   )),
               BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    FontAwesomeIcons.graduationCap,
+                  label: '.',
+                  icon: ImageIcon(
+                    const AssetImage(
+                      'assets/grad.png',
+                    ),
                     color: selected == 'second' ? Colors.black : Colors.grey,
                   )),
               const BottomNavigationBarItem(
                   label: '',
-                  icon: Icon(
-                    FontAwesomeIcons.user,
+                  icon: ImageIcon(
+                    AssetImage(
+                      'assets/pason.png',
+                    ),
                     color: Colors.grey,
                   )),
             ]),
